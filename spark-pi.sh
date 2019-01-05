@@ -61,7 +61,7 @@ srun --output=${SPARK_LOG_DIR}spark-%j-workers.out --label ${SPARK_HOME}sbin/sta
 ${SPARK_HOME}bin/spark-submit \
         --master ${MASTER_URL} \
         --total-executor-cores $((SLURM_NTASKS * SLURM_CPUS_PER_TASK)) \
-	      --class org.apache.spark.examples.SparkPi \
+	--class org.apache.spark.examples.SparkPi \
         ${SPARK_HOME}examples/jars/spark-examples_2.11-2.3.1.jar \
         1000000
 
