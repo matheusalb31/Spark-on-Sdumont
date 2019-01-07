@@ -70,10 +70,10 @@ scancel ${SLURM_JOBID}.0
 
 #Creates a directory to store all the files that were needed for Spark.
 mkdir sparkjob-${SPARK_IDENT_STRING}
-mv sparkjob-${SPARK_IDENT_STRING}.out sparkjob-${SPARK_IDENT_STRING}
-mv ${SPARK_WORKER_DIR} sparkjob-${SPARK_IDENT_STRING}/Worker/
-mv ${SPARK_LOG_DIR} sparkjob-${SPARK_IDENT_STRING}/Log/
-mv ${SPARK_LOCAL_DIRS} sparkjob-${SPARK_IDENT_STRING}/Local/
+mv sparkjob-${SPARK_IDENT_STRING}.out ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}
+mv ${SPARK_WORKER_DIR} ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}/Worker/
+mv ${SPARK_LOG_DIR} ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}/Log/
+mv ${SPARK_LOCAL_DIRS} ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}/Local/
 
 #Suggested time to consult Spark web UI.
 sleep 120
