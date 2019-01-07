@@ -74,7 +74,6 @@ sleep 120
 #Stops the Master and all Workers.
 $SPARK_HOME/sbin/stop-master.sh
 
-
 #Creates a directory to store all the files that were needed for Spark.
 mkdir sparkjob-${SPARK_IDENT_STRING}
 mv sparkjob-${SPARK_IDENT_STRING}.out ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}
