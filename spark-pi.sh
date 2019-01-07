@@ -68,15 +68,16 @@ ${SPARK_HOME}bin/spark-submit \
 #Cancels job when execution finishes.
 scancel ${SLURM_JOBID}.0
 
+#Suggested time to consult Spark web UI.
+sleep 120
+
+#Stops the Master and all Workers.
+$SPARK_HOME/sbin/stop-master.sh
+
+
 #Creates a directory to store all the files that were needed for Spark.
 mkdir sparkjob-${SPARK_IDENT_STRING}
 mv sparkjob-${SPARK_IDENT_STRING}.out ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}
 mv ${SPARK_WORKER_DIR} ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}/Worker/
 mv ${SPARK_LOG_DIR} ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}/Log/
 mv ${SPARK_LOCAL_DIRS} ${USER_HOME}sparkjob-${SPARK_IDENT_STRING}/Local/
-
-#Suggested time to consult Spark web UI.
-sleep 120
-
-#Stops the Master and all Workers.
-$SPARK_HOME/sbin/stop-master.sh
