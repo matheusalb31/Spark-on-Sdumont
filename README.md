@@ -47,7 +47,7 @@ ${SPARK_HOME}bin/spark-submit \
         /scratch/PATH-TO-THE-EXECUTABLE/
 ```
 
-Thetime to consult the web interface before the Master stops is also configured according to your need.
+The time to consult the web interface before the Master stops is also configured according to your need.
 ```
 #Suggested time to consult Spark web UI.
 sleep TIME-IN-SECONDS
