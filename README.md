@@ -30,3 +30,25 @@ module load MODULE
 ```
 
 Note: The required modules may vary depending on the application.
+
+Specify the correct path to the user home directory on Scratch.
+
+```
+#Path to user home directory.
+USER_HOME=/scratch/PROJECT-NAME/USER-NAME/
+```
+
+Configure the path to the code you want to run.
+```
+#Job submission.
+${SPARK_HOME}bin/spark-submit \
+        --master ${MASTER_URL} \
+        --total-executor-cores $((SLURM_NTASKS * SLURM_CPUS_PER_TASK)) \
+        /scratch/PATH-TO-THE-EXECUTABLE/
+```
+
+Thetime to consult the web interface before the Master stops is also configured according to your need.
+```
+#Suggested time to consult Spark web UI.
+sleep TIME-IN-SECONDS
+```
