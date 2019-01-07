@@ -13,7 +13,7 @@ By default, Spark will start 1 Master and 50 Workers.
 
 ## Getting Started
 At the beginning of the script, the required settings for the environment must be configured.
-For more information, see [Sdumont Manual](https://sdumont.lncc.br/support_manual.php?pg=support#6.1).
+For more information, see [Sdumont Manual](https://sdumont.lncc.br/support_manual.php?pg=support#).
 
 ```
 #!/bin/sh
