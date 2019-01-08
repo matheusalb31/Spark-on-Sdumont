@@ -24,7 +24,7 @@ $ firefox <HOST>:WEB_UI_PORT
 
 ```
 
-Finally, a directory will be created in the user's / home, containing the output file and also  files that were used by Spark during execution.
+Finally, a directory will be created in the user's home, containing the output file and also  files that were used by Spark during execution.
 
 ## Getting Started
 At the beginning of the script, the required settings for the environment must be configured.
@@ -46,10 +46,10 @@ module load MODULE
 
 Note: The required modules may vary depending on the application.
 
-Specify the correct path to the user home directory on Scratch.
+Specify the correct path to the user's home directory on Scratch.
 
 ```
-#Path to user home directory.
+#Path to user's home directory.
 USER_HOME=/scratch/PROJECT-NAME/USER-NAME/
 ```
 
