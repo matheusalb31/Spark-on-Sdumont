@@ -11,16 +11,16 @@ By default, Spark will start 1 Master and 50 Workers.
 
 ## Details and Output Files
 
-Details of the execution can be found in the web interface of the Master node <HOST>:WEB_UI_PORT.
+Details of the execution can be found in the web interface of the Master node.
 To know exactly the host and port, run this command
 
 ```
-#grep -Po '(?=host\s).*' /scratch/PROJECT-NAME/USER-NAME/sparkLogs/spark-JOB_ID-org.*master*.out
+$ grep -Po '(?=host\s).*' /scratch/PROJECT-NAME/USER-NAME/sparkLogs/spark-JOB_ID-org.*master*.out
 ```
 
 After that, using the next command, the Master UI will be open.
 ```
-#firefox <HOST>:WEB_UI_PORT
+$ firefox <HOST>:WEB_UI_PORT
 
 ```
 
