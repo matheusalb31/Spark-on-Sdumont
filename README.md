@@ -11,6 +11,21 @@ By default, Spark will start 1 Master and 50 Workers.
 
 ## Details and Output Files
 
+Details of the execution can be found in the web interface of the Master node <HOST>:WEB_UI_PORT.
+To know exactly the host and port, run this command
+
+```
+#grep -Po '(?=host\s).*' /scratch/PROJECT-NAME/USER-NAME/sparkLogs/spark-JOB_ID-org.*master*.out
+```
+
+After that, using the next command, the Master UI will be open.
+```
+#firefox <HOST>:WEB_UI_PORT
+
+```
+
+Finally, a directory will be created in the user's / home, containing the output file and also  files that were used by Spark during execution.
+
 ## Getting Started
 At the beginning of the script, the required settings for the environment must be configured.
 For more information, see [Sdumont Manual](https://sdumont.lncc.br/support_manual.php?pg=support#).
