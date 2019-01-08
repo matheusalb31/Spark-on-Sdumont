@@ -7,7 +7,7 @@ The code to be processed, in particular, is a standard example of the Spark libr
 
 ## Configuration
 The script was configured to run in the CPU queue, using 30 nodes, performing one task per node using 24 CPUs per task.
-By default, Spark will start 1 Master and 50 Workers.
+By default, Spark will start 1 Master and 30 Workers.
 
 ## Details and Output Files
 
