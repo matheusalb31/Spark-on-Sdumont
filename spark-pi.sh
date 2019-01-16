@@ -19,15 +19,15 @@ export SPARK_IDENT_STRING=$SLURM_JOBID
 USER_HOME=/scratch/ebiodiv/matheus.albuquerque/
 
 #Creates all necessary directories.
-mkdir ${USER_HOME}sparkLogs/
-mkdir ${USER_HOME}sparkWorker/
-mkdir ${USER_HOME}sparkLocal/
+mkdir ${USER_HOME}sparkLogs-{$SLURM_JOBID}/
+mkdir ${USER_HOME}sparkWorker-{$SLURM_JOBID}/
+mkdir ${USER_HOME}sparkLocal-{$SLURM_JOBID}/
 
 #Redirects the directories.
 export SPARK_HOME=/scratch/app/spark/2.3.1+hadoop2.7/
-export SPARK_LOG_DIR=${USER_HOME}sparkLogs/
-export SPARK_WORKER_DIR=${USER_HOME}sparkWorker/
-export SPARK_LOCAL_DIRS=${USER_HOME}sparkLocal/
+export SPARK_LOG_DIR=${USER_HOME}sparkLogs-{$SLURM_JOBID}/
+export SPARK_WORKER_DIR=${USER_HOME}sparkWorker-{$SLURM_JOBID}/
+export SPARK_LOCAL_DIRS=${USER_HOME}sparkLocal-{$SLURM_JOBID}/
 
 #Show the list of nodes allocated for the job.
 echo NODE-LIST
