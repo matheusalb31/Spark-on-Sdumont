@@ -8,15 +8,16 @@
 
 #Load all necessary modules.
 source /scratch/app/modulos/intel-psxe-2016.2.062.sh
-module load openmpi/1.10_intel
-module load R/3.3.1_intel
-module load java/jdk-8u102
-module load spark
+module load openmpi/icc/2.0.4.2
+module load openmpi/gnu/2.0.4.2
+module load R/3.5.2_openmpi_2.0_gnu
+module load java/jdk-8u201
+module load spark/2.3+hadoop2.7
 
 export SPARK_IDENT_STRING=$SLURM_JOBID
 
 #Path to user home directory.
-USER_HOME=/scratch/ebiodiv/matheus.albuquerque/
+USER_HOME=/scratch/modler/matheus.albuquerque2/
 
 #Creates all necessary directories.
 mkdir ${USER_HOME}sparkLogs-{$SLURM_JOBID}/
@@ -24,7 +25,7 @@ mkdir ${USER_HOME}sparkWorker-{$SLURM_JOBID}/
 mkdir ${USER_HOME}sparkLocal-{$SLURM_JOBID}/
 
 #Redirects the directories.
-export SPARK_HOME=/scratch/app/spark/2.3.1+hadoop2.7/
+export SPARK_HOME=/scratch/app/spark/2.3+hadoop2.7/
 export SPARK_LOG_DIR=${USER_HOME}sparkLogs-{$SLURM_JOBID}/
 export SPARK_WORKER_DIR=${USER_HOME}sparkWorker-{$SLURM_JOBID}/
 export SPARK_LOCAL_DIRS=${USER_HOME}sparkLocal-{$SLURM_JOBID}/
